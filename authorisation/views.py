@@ -9,12 +9,11 @@ def login(request):
         password = request.POST['password']
 
         user = auth.authenticate(username=email,password=password)
-
         if user:
             auth.login(request,user)
             return redirect('home')
         else:
-            messages.error(request, "Invalid Credentials or User does not exist. Please verify your credentials or create and account!".format(email))
+            messages.error(request, "Invalid Credentials or User does not exist. Please verify your credentials or create and account!")
             return redirect('login')
     
 
@@ -34,10 +33,10 @@ def register(request):
             messages.error(request, "A user with the same email address already exist, Please use a different email".format(email))
             return redirect('register')
         
-        newUser = User.objects.create_user(email=email, username=email, password=password1) #used the email for username
-        newUser.save()
+        user = User.objects.create_user(email=email, username=email, password=password1) #used the email for username
+        user.save()
 
-        auth.login(request,newUser)
+        auth.login(request,user)
         return redirect('home')
 
         print('Usernae sumitted was {}'.format(email))
