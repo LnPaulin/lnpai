@@ -1,10 +1,11 @@
 from .models import *
 from django import forms
+
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit, Row, Column
 
 
-class ProfileForm(forms.Form):
+class ProfileForm(forms.ModelForm):
     address = forms.CharField(
         required=True,
         label='Address ',
