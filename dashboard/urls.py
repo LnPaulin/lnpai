@@ -10,6 +10,8 @@ urlpatterns = [
 #blog gen routes
     path('generate-blog-topic', views.blogTopic, name='blog-topic'),
     path('generate-blog-sections', views.blogSections, name='blog-sections'),
+    path('ielts-assistant', views.ieltsAssistant, name='ielts-assistant'),
+    path('ielts-writing', views.ieltsWriting, name='ielts-writing'),
     
 ]
 

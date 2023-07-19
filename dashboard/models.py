@@ -46,9 +46,10 @@ class Profile(models.Model):
 
 
 class Blog(models.Model):
-    title = models.CharField(max_length=100)
-    keyword = models.CharField(null=True, blank=True, max_length=100)
-    wordcount = models.CharField(null=True, blank=True, max_length=100)
+    title = models.CharField(max_length=500)
+    keyword = models.CharField(null=True, blank=True, max_length=500)
+    audience = models.CharField(null=True, blank=True, max_length=100)
+    wordcount = models.CharField(null=True, blank=True, max_length=500)
     Profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
     #Utitity variables

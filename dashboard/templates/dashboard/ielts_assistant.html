@@ -15,20 +15,20 @@
                             <img class="img-fluid" src="{% static 'dashboard/img/illustrations/blogtopic.svg' %}" alt="create blog">
                         </div>
                         <div class="col-lg-6">
-                            <h2 class="md-3">Enter your blog topic idea to generate blog topic suggesions</h2>
+                            <h2 class="md-3">Enter the Question and Answer below</h2>
                             <form class="" action="#" method="POST">
                                 {% csrf_token %}
                                 <div class="mb-3">
-                                    <label for="blogidea" class="form-label">Blog Idea </label>
-                                    <input type="text" class="form-control" name="blogidea" placeholder="Enter you blog idea" required autofocus/>
+                                    <label for="blogidea" class="form-label">Question </label>
+                                    <input type="text" class="form-control" name="blogidea" placeholder="Enter the Question" required autofocus/>
                                   </div>
                                   <div class="mb-3">
-                                    <label for="keywords" class="form-label">Keywords</label>
-                                    <input type="text" class="form-control" name="keywords" placeholder="What keywords do you want to use for this idea" required autofocus/>
+                                    <label for="keywords" class="form-label">Answer</label>
+                                    <input style="height: 200px;" type="text" class="form-control" name="keywords" placeholder="Enter your answer" required autofocus/>
                                   </div>
                     
                                   <div class="mb-3">
-                                    <button class="btn btn-primary d-grid w-100" type="submit">Generate Blog topic Ideas</button>
+                                    <button class="btn btn-primary d-grid w-100" type="submit">EValuate</button>
                                   </div>
                             </form>
                         </div>

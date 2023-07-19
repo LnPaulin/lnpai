@@ -59,6 +59,41 @@ def generateBlogSectionHeadings(topic, keywords):
 
 
 
+
+
+
+
+def ieltsWritingEvaluation(topic, keywords):
+    blog_topics = []
+
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt="you are and IELTS examiner, provide a review the following writing task 1. Your review must look like this :\n- review per evaluation criteria (Task Fulfillment,Coherence & Cohesion,Lexical Resources and Grammatical Range & Accuracy) \n-estimated score per evaluation critaria\n- areas to imporove on\n\nquestion: {}\n \nanswer: {}\n*".format(topic,keywords),
+        temperature=1,
+        max_tokens=700,
+        top_p=1,
+        best_of=1,
+        frequency_penalty=0,
+        presence_penalty=0)
+    
+    if 'choices' in response:
+        if len(response['choices'][0]['text'])>0:
+            res = response['choices'][0]['text']
+        else:
+            return []
+    else:
+        return []
+    a_list = res.split('*')
+    if len(a_list) > 0:
+        for blog in a_list:
+            blog_topics.append(blog)
+    else:
+        return []
+    return blog_topics
+
+
+
+
 # res = generateBlogTopicIdeas(topic, keywords).replace('\n', '')
 # b_list = res.split('*')
 # for blog in b_list:

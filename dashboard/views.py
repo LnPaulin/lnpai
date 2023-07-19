@@ -65,3 +65,39 @@ def blogSections(request):
     context['blogTopics'] = request.session['blogTopics']
 
     return render(request, 'dashboard/blog_section.html', context)
+
+
+
+def ieltsAssistant(request):
+    context = {}
+
+    if request.method == 'POST':
+        blogidea = request.POST['blogidea']
+        keywords = request.POST['keywords']
+
+        blogTopics = ieltsWritingEvaluation(blogidea, keywords)
+        if len(blogTopics) > 0:
+            request.session['blogTopics'] = blogTopics
+            return redirect('ielts-writing')
+        else:
+            messages.error(request, "Try again we coundn't get any topics for you")
+            return redirect('blog-topic')
+
+
+    return render(request, 'dashboard/ielts_assistant.html', context)
+
+
+
+def ieltsWriting(request):
+    if 'blogTopics' in request.session:
+        pass
+    else:
+        messages.error(request, "Start by entering a blog idea and keywords")
+        return redirect('ielts-writing')
+    
+    context = {}
+    context['blogTopics'] = request.session['blogTopics']
+
+    return render(request, 'dashboard/ielts_writing.html', context)
+
+
