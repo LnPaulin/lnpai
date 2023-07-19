@@ -1,1 +1,1 @@
-web: gunicorn LnPAi.wsgi --log-file--
+web: gunicorn 'LnPAi.wsgi'
