@@ -1,0 +1,67 @@
+{% extends 'layout/dashboard.html' %}
+{% load static %}
+{%block content%}
+
+<div class="container-fluid flex-grow-1 container-p-y">
+             
+    <div class="layout-demo-wrapper">
+
+
+        <div class="row">
+            <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1>WE have generated these possible blog topic ideas for you</h1>
+                                {% for blog in blogTopics  %}
+                                    <p>{{blog}}</p>
+                                    <br>
+                                {% endfor %}
+                        </div>
+                        <div class="col-lg-6">
+                            <img class="img-fluid" src="{% static 'dashboard/img/illustrations/blogtopic.svg' %}" alt="create blog">
+                            
+                        </div>
+                    </div>
+                </div>
+            
+            
+        </div>    
+
+
+
+
+      
+
+        
+
+
+
+
+        
+        
+      </div>
+      
+    </div>
+ 
+  </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
