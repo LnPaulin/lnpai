@@ -135,7 +135,7 @@ STATICFILES_DIR = [os.path.join(BASE_DIR,'static')]
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 
-OPENAI_API_KEYS = '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'
+OPENAI_API_KEYS = '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'
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
