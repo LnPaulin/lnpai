@@ -14,6 +14,9 @@ from pathlib import Path
 import os
 from django.contrib import messages
 
+#importing the tool that help use hide secret key
+from decouple import config
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,10 +34,12 @@ MESSAGE_TAGS = {
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-zqeyil4$&&)8@*^6pp5r+(um)#x-bvqcoz)v9uqi!#b19)yq9e'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', cast=bool)
+
+OPENAI_API_KEYS = config('OPENAI_API_KEYS')
 
 ALLOWED_HOSTS = ['lnpai-production.up.railway.app', 'localhost', '127.0.0.1']
 
@@ -143,7 +148,7 @@ STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 
-OPENAI_API_KEYS = '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'
+
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
