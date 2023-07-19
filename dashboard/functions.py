@@ -68,7 +68,7 @@ def ieltsWritingEvaluation(topic, keywords):
 
     response = openai.Completion.create(
         model="text-davinci-003",
-        prompt="you are and IELTS examiner, provide a review the following writing task 1. Your review must look like this :\n- review per evaluation criteria (Task Fulfillment,Coherence & Cohesion,Lexical Resources and Grammatical Range & Accuracy) \n-estimated score per evaluation critaria\n- areas to imporove on\n\nquestion: {}\n \nanswer: {}\n*".format(topic,keywords),
+        prompt="you are and IELTS examiner, provide a review the following writing task 1. Your review must look like this :\n- review per evaluation criteria (Task Fulfillment,Coherence & Cohesion,Lexical Resources and Grammatical Range & Accuracy)\n- quote a part of the answer provided for each criteria you review.\n-estimated score per evaluation critaria\n- areas to imporove on\n- the review should be detailed\n\nquestion: {}\n \nanswer: {}\n*".format(topic,keywords),
         temperature=1,
         max_tokens=700,
         top_p=1,

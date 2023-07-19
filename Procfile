@@ -1,0 +1,1 @@
+web: gunicorn LnPAi.wsgi --log-file--
