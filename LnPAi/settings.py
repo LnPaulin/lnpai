@@ -36,8 +36,9 @@ SECRET_KEY = 'django-insecure-zqeyil4$&&)8@*^6pp5r+(um)#x-bvqcoz)v9uqi!#b19)yq9e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["lnpai-production.up.railway.app"]
+ALLOWED_HOSTS = ['lnpai-production.up.railway.app', 'localhost', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = ['https://lnpai-production.up.railway.app','https://*.127.0.0.1']
 
 # Application definition
 
