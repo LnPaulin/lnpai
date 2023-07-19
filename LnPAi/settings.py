@@ -143,7 +143,7 @@ STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 
-OPENAI_API_KEYS = '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'
+OPENAI_API_KEYS = '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'
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
