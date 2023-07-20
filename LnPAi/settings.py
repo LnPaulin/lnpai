@@ -34,12 +34,12 @@ MESSAGE_TAGS = {
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-zqeyil4$&&)8@*^6pp5r+(um)#x-bvqcoz)v9uqi!#b19)yq9e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool)
+DEBUG = True
 
-OPENAI_API_KEYS = config('OPENAI_API_KEYS')
+OPENAI_API_KEYS = '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'
 
 ALLOWED_HOSTS = ['lnpai-production.up.railway.app', 'localhost', '127.0.0.1']
 
