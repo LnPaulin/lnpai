@@ -34,6 +34,8 @@ def profile(request):
              
     return render(request, 'dashboard/profile.html', context)
 
+
+@login_required
 def blogTopic(request):
     context = {}
 
@@ -53,7 +55,7 @@ def blogTopic(request):
     return render(request, 'dashboard/blog_topic.html', context)
 
 
-
+@login_required
 def blogSections(request):
     if 'blogTopics' in request.session:
         pass
@@ -67,7 +69,7 @@ def blogSections(request):
     return render(request, 'dashboard/blog_section.html', context)
 
 
-
+@login_required
 def ieltsAssistant(request):
     context = {}
 
@@ -87,7 +89,7 @@ def ieltsAssistant(request):
     return render(request, 'dashboard/ielts_assistant.html', context)
 
 
-
+@login_required
 def ieltsWriting(request):
     if 'blogTopics' in request.session:
         pass
