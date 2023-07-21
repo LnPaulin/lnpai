@@ -34,7 +34,7 @@ MESSAGE_TAGS = {
 SECRET_KEY = 'django-insecure-zqeyil4$&&)8@*^6pp5r+(um)#x-bvqcoz)v9uqi!#b19)yq9e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 OPENAI_API_KEYS = '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'
 
