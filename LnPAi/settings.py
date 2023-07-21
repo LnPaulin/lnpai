@@ -40,7 +40,7 @@ OPENAI_API_KEYS = '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'
 
 ALLOWED_HOSTS = ['lnpai-production.up.railway.app', 'localhost', '127.0.0.1', 'fonkwapaulin.com', 'www.fonkwapaulin.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://lnpai-production.up.railway.app','https://*.127.0.0.1', 'https://fonkwapaulin.com', 'www.fonkwapaulin.com', 'https://www.fonkwapaulin.com']
+CSRF_TRUSTED_ORIGINS = ['https://lnpai-production.up.railway.app','https://*.127.0.0.1', 'https://fonkwapaulin.com', 'https://www.fonkwapaulin.com']
 
 # Application definition
 

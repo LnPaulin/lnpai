@@ -20,11 +20,13 @@
                                 {% csrf_token %}
                                 <div class="mb-3">
                                     <label for="blogidea" class="form-label">Question </label>
-                                    <input type="text" class="form-control" name="blogidea" placeholder="Enter the Question" required autofocus/>
+                                    <textarea type="text" class="form-control" name="blogidea" placeholder="Enter the Question" required autofocus rows="7"></textarea>
+                                    {% comment %} <input type="text" class="form-control" name="blogidea" placeholder="Enter the Question" required autofocus/> {% endcomment %}
                                   </div>
                                   <div class="mb-3">
                                     <label for="keywords" class="form-label">Answer</label>
-                                    <input style="height: 200px;" type="text" class="form-control" name="keywords" placeholder="Enter your answer" required autofocus/>
+                                    <textarea type="text" class="form-control" name="keywords" placeholder="Enter your answer" required autofocus rows="15"></textarea>
+                                    {% comment %} <input style="height: 200px;" type="text" class="form-control" name="keywords" placeholder="Enter your answer" required autofocus/> {% endcomment %}
                                   </div>
                     
                                   <div class="mb-3">
