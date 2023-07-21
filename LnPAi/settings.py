@@ -34,13 +34,13 @@ MESSAGE_TAGS = {
 SECRET_KEY = 'django-insecure-zqeyil4$&&)8@*^6pp5r+(um)#x-bvqcoz)v9uqi!#b19)yq9e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 OPENAI_API_KEYS = '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'
 
 ALLOWED_HOSTS = ['lnpai-production.up.railway.app', 'localhost', '127.0.0.1', 'fonkwapaulin.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://lnpai-production.up.railway.app','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://lnpai-production.up.railway.app','https://*.127.0.0.1', 'fonkwapaulin.com']
 
 # Application definition
 
